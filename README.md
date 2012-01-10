@@ -61,3 +61,7 @@ See `TestMaybe.cpp` for unit tests which show example usage of the `Maybe` and
 ## Performance
 
 The templates use `QVariant` as the underlying storage and the same performance considerations apply.  A QVariant in Qt 4 is 12 bytes in size on most platforms - 8 bytes for the data itself or a pointer to the data, plus 4 bytes for the type tag and flags.  Pointers and primitive types of 8 bytes in size or less are stored within the QVariant.  Larger types are stored in heap-allocated storage.
+
+## Exceptions
+
+Unlike `boost::variant`, no attempt is made to [handle exceptions](http://www.boost.org/doc/libs/1_48_0/doc/html/variant/design.html#variant.design.never-empty) that may be thrown when constructing or copying types.  The state of a `Maybe` or `Either` after a failed copy constructor call is undefined.
