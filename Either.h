@@ -161,7 +161,7 @@ struct MakeEither
 };
 
 template <class T1>
-MakeEither<T1> some(const T1& value)
+inline MakeEither<T1> some(const T1& value)
 {
 	return MakeEither<T1>(value);
 }
