@@ -1,4 +1,5 @@
-#pragma once
+#ifndef QT_MAYBE_H
+#define QT_MAYBE_H
 
 #include "Either.h"
 
@@ -120,3 +121,4 @@ JustType<T> just(const T& value) {
 	return JustType<T>(value);
 }
 
+#endif

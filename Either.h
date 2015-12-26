@@ -1,4 +1,5 @@
-#pragma once
+#ifndef QT_EITHER_H
+#define QT_EITHER_H
 
 #include <QtCore/QMetaType>
 #include <QtCore/QVariant>
@@ -165,3 +166,4 @@ MakeEither<T1> some(const T1& value)
 	return MakeEither<T1>(value);
 }
 
+#endif
