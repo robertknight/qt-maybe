@@ -3,10 +3,10 @@
 ######################################################################
 
 TEMPLATE = app
-TARGET = 
+TARGET = TestMaybe 
 DEPENDPATH += .
 INCLUDEPATH += .
-CONFIG += qtestlib
+QT += testlib
 
 # Input
 HEADERS += Either.h Maybe.h TestMaybe.h

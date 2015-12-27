@@ -1,4 +1,5 @@
-#pragma once
+#ifndef QT_MAYBE_H
+#define QT_MAYBE_H
 
 #include "Either.h"
 
@@ -104,7 +105,7 @@ struct JustType<T*>
 /** Returns a type which can be implicitly cast to any Maybe<T> type,
   * representing a function which returned no value.
   */
-NothingType nothing()
+inline NothingType nothing()
 {
 	return NothingType();
 }
@@ -116,7 +117,8 @@ NothingType nothing()
   * if the pointer is null.
   */
 template <typename T>
-JustType<T> just(const T& value) {
+inline JustType<T> just(const T& value) {
 	return JustType<T>(value);
 }
 
+#endif
