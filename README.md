@@ -4,6 +4,8 @@ A set of simple(ish) C++ templates which implement [sum](http://en.wikipedia.org
 types.  They serve a similar purpose to `boost::variant` and `boost::optional`
 but are implemented on top of Qt's QVariant container.
 
+**Update (2017-09-23): A `variant` class has been added to the C++ standard library for C++17 ([std::variant](http://en.cppreference.com/w/cpp/utility/variant)) and you can find [polyfills](https://github.com/mpark/variant) for compilers that don't ship with it yet. Consider using that instead of this code in your project.**
+
 ## Templates
 
 ### Either
