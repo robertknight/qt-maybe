@@ -3,6 +3,10 @@
 
 #include "Either.h"
 
+// helper type used for a no-value Maybe
+struct Nothing {};
+Q_DECLARE_METATYPE(Nothing)
+
 /** A simple option type implementation which represents the result
   * of an operation which returned either a valid result or nothing.
   *
@@ -23,7 +27,7 @@ class Maybe
 		  * value.
 		  */
 		Maybe()
-		: m_value(false)
+		: m_value(Nothing())
 		{}
 
 		/** Returns true if this Maybe<T> has a value. */
@@ -50,7 +54,7 @@ class Maybe
 		: m_value(value) 
 		{}
 
-		Either<bool,T> m_value;
+		Either<Nothing,T> m_value;
 };
 
 template <class T>
